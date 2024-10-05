@@ -70,8 +70,6 @@ ExtendedKalmanFilter::ExtendedKalmanFilter(const rclcpp::NodeOptions & options)
   R(0, 0) = var_imu_w_;   // Process noise for x
   R(1, 1) = var_imu_w_;   // Process noise for y
   R(2, 2) = var_imu_acc_; // Process noise for theta
-
-  prev_time_ = this->now();
 }
 
 
@@ -79,6 +77,7 @@ void ExtendedKalmanFilter::init()
 {
   X << 0, 0, 0;
   initialized = true;
+  prev_time_ = this->now();
 }
 
 
