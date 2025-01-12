@@ -30,7 +30,6 @@ private:
   bool initialized = false;
 
   float v;
-  float theta;
   Eigen::Vector3d X; 
   Eigen::Vector3d Z; 
 
@@ -61,7 +60,6 @@ private:
   tf2_ros::TransformBroadcaster broadcaster_;
 
   bool broadcast_transform_;
-
   std::string map_frame_id_;
   std::string robot_frame_id_;
   std::string initial_pose_topic_;

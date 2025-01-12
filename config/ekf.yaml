@@ -11,3 +11,4 @@
     var_odom: 0.1
     use_gnss: true
     use_odom: false
+    broadcast_transform : true
